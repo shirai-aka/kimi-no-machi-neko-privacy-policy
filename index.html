@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>君の街ねこ — プライバシーポリシー・サポート</title>
+  <meta name="description" content="君の街ねこが扱う情報と、お問い合わせ先・よくある質問。">
+  <link rel="alternate" hreflang="en" href="./index.en.html">
+  <link rel="alternate" hreflang="ja" href="./">
+  <style>
+    :root {
+      --bg: #f8f3ea; --card: #fffdf8; --ink: #3d3028; --sub: #7a6a5c; --line: #e6dccd;
+      --accent: #b86a24; --accent-soft: #f6e7d6; --focus: #2b6cb0;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #17151a; --card: #221f25; --ink: #f1ebe2; --sub: #b4a99c; --line: #3a3540;
+        --accent: #e9a25c; --accent-soft: #342a21; --focus: #8ab4f8; }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Segoe UI", Roboto, sans-serif;
+      font-size: 16px; line-height: 1.8; overflow-wrap: anywhere;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, label:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+    .wrap { width: min(760px, 100%); margin: 0 auto; padding: 0 16px; }
+    .site-header { border-bottom: 1px solid var(--line); background: var(--card); }
+    .site-nav { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; min-height: 52px; padding: 8px 0; font-size: 14px; }
+    .site-nav a { text-decoration: none; font-weight: 600; }
+    .site-nav .home::before { content: "\2190\00a0"; }
+    .site-nav .lang { margin-left: auto; padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; }
+    .site-nav .lang:hover { background: var(--accent-soft); }
+    main { padding: 36px 0 56px; }
+    .page-header { margin-bottom: 28px; }
+    .eyebrow { margin: 0 0 4px; font-size: 15px; font-weight: 700; color: var(--accent); }
+    .eyebrow a { text-decoration: none; }
+    h1 { margin: 0; font-size: clamp(24px, 5.5vw, 32px); line-height: 1.3; }
+    .meta { margin: 10px 0 0; color: var(--sub); font-size: 14px; }
+    .lead { font-size: 17px; }
+    h2 { font-size: 20px; line-height: 1.4; margin: 44px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+    h3 { font-size: 17px; line-height: 1.5; margin: 28px 0 6px; }
+    p, ul, ol { margin: 0 0 1em; }
+    ul, ol { padding-left: 1.4em; }
+    li { margin: .3em 0; }
+    li > ul, li > ol { margin: .3em 0 .3em; }
+    strong { font-weight: 700; }
+    hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0 0 1em; font-size: 15px; }
+    th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); font-weight: 700; }
+    .box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 0 0 1.4em; }
+    .box > :first-child { margin-top: 0; }
+    .box > :last-child { margin-bottom: 0; }
+    .box ul, .box ol { margin-bottom: 0; }
+    .notice { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 12px 16px; margin: 0 0 28px; font-size: 14px; color: var(--ink); }
+    .notice p { margin: 0; }
+    .card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin: 0 0 14px; }
+    .card h2 { margin: 0 0 6px; padding: 0; border: 0; font-size: 19px; }
+    .card p { margin: 0 0 8px; color: var(--sub); }
+    .card p:last-child { margin: 0; }
+    .card a.more { font-weight: 700; text-decoration: none; }
+    .card a.more::after { content: "\00a0\2192"; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin: 0 0 1.4em; }
+    .gallery figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 8px; }
+    .gallery img { width: 100%; height: auto; border-radius: 8px; display: block; }
+    .gallery figcaption { font-size: 12px; color: var(--sub); text-align: center; margin-top: 6px; }
+    .site-footer { border-top: 1px solid var(--line); padding: 20px 0 48px; color: var(--sub); font-size: 14px; }
+    .site-footer nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 10px; }
+    .site-footer nav a { text-decoration: none; font-weight: 600; }
+    .site-footer p { margin: 0; }
+    @media (max-width: 480px) {
+      body { font-size: 15.5px; }
+      main { padding-top: 28px; }
+      h2 { margin-top: 36px; }
+      table { display: block; overflow-x: auto; }
+    }
+    @media print {
+      .site-header, .site-footer nav { display: none; }
+      body { background: #fff; color: #000; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav wrap" aria-label="サイト">
+      <a class="home" href="https://shirai-aka.github.io/">アプリ一覧</a>
+      <a class="lang" href="./index.en.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <article>
+      <header class="page-header">
+        <p class="eyebrow">君の街ねこ</p>
+        <h1>プライバシーポリシー・サポート</h1>
+      <p class="meta">最終更新日: 2026年10月25日</p>
+      </header>
+<p class="lead"><strong>このアプリは、あなたが誰かを知りません。</strong></p>
+
+    <p>君の街ねこ（以下「本アプリ」）は、今いる街のご当地ねこを集めるアプリです。そのために位置情報を使いますが、位置は「今どの市区町村にいるか」を調べるためだけに、あなたが「さがす」を押した瞬間にだけ使います。移動の追跡はしません。本ページは、本アプリが扱う情報と、お問い合わせ先をまとめたものです。</p>
+
+    <h2 id="collect">1. 集めないもの</h2>
+    <ul>
+      <li><strong>アカウントは不要です。</strong> 名前・メールアドレス・その他の個人情報を求めません。</li>
+      <li><strong>位置情報を開発者に送りません。</strong> 「さがす」を押したときの位置は、端末の中で市区町村に変換されます。緯度経度が開発者のサーバーや広告会社に送られることはありません（開発者はサーバーを持っていません）。</li>
+      <li><strong>バックグラウンドで位置を取得しません。</strong> アプリを閉じているあいだ、位置情報は一切使いません。</li>
+      <li><strong>開発者が利用状況を分析することはありません。</strong> 本アプリに、開発者向けの分析ツールは組み込まれていません。</li>
+    </ul>
+
+    <h2 id="location">2. 位置情報について</h2>
+    <ul>
+      <li>位置情報は、あなたが「さがす」を押したときに1回だけ取得し、その場所の都道府県と市区町村（日本の外では国）を端末内で判定します。国の判定には、アプリに入っている国境データを使います。</li>
+      <li>出会ったねこの記録（日時、都道府県、市区町村。日本の外でさがしたときは国名）は、あなたの端末と、あなたの iCloud（下記）にのみ保存されます。緯度経度は記録しません（以前のバージョンが記録していた緯度経度は、アップデート後の起動時に消去します）。</li>
+      <li>天気によって出るねこを決めるため、Apple の天気サービス（WeatherKit）に、約1kmに丸めたおおよその位置を送ります。</li>
+      <li>位置情報の許可は、iPhone の「設定」からいつでも取り消せます。取り消しても図鑑や記録は消えません。</li>
+      <li>位置を取ったときの移動の速さ（新幹線などで会えるねこの判定）も、端末の中で使うだけで、記録も送信もしません。</li>
+      <li>設定で誕生日を入れた場合、その月日だけを端末の中に保存します（誕生日にだけ会えるねこの判定に使います）。iCloud には同期せず、開発者にも送られません。設定からいつでも消せます。</li>
+      <li>きろくに書いた「ひとことメモ」は、出会いの記録と一緒に、あなたの端末とあなたの iCloud にだけ保存されます。開発者には送られません。</li>
+      <li>「特別な日のお知らせ」をオンにした場合、お知らせは端末の中で予約するだけで、外へは何も送りません。</li>
+      <li>ホーム画面・ロック画面のウィジェットに表示するため、最後に会ったねこの名前・街の名前・絵を、端末の中のアプリ専用の領域（App Group）に置きます。端末の外には送りません。</li>
+    </ul>
+
+    <h2 id="icloud">3. iCloud 同期について</h2>
+    <p>出会ったねこの記録は、Apple の iCloud（CloudKit のプライベートデータベース）を通じて、同じ Apple アカウントでサインインしたあなたの端末間で同期されます。このデータは Apple のサーバー上であなたのアカウントに紐づいて保管され、開発者を含む第三者はアクセスできません。iCloud を使っていない場合、記録は端末内にのみ保存されます。</p>
+
+    <h2 id="weather">4. 天気について</h2>
+    <p>一部のねこは、そのときの天気によって現れます。天気の判定には Apple の WeatherKit を使います。このとき、天気を取得するために現在地が Apple に送られます。Apple による取り扱いは<a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>に従います。開発者はこの情報を受け取りません。</p>
+
+    <h2 id="ads">5. 広告について</h2>
+    <p>本アプリは Google AdMob（Google Mobile Ads）による広告を表示します。広告の配信と効果測定のため、Google は次の情報を収集することがあります。</p>
+    <ul>
+      <li>デバイスID（広告識別子。あなたが iPhone のトラッキング許可で「許可」を選んだ場合のみ）</li>
+      <li>製品の操作（広告の表示・タップなど）</li>
+      <li>広告データ（表示された広告の情報）</li>
+      <li>おおよその場所（IP アドレスから推定される地域。本アプリが取得した位置情報は渡しません）</li>
+      <li>クラッシュデータ、パフォーマンスデータ、その他の診断データ</li>
+    </ul>
+    <p>詳しくは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>と<a href="https://policies.google.com/technologies/ads">Google による広告に関する説明</a>をご覧ください。トラッキングを許可しない場合でも、本アプリはすべての機能を使えます（その場合はパーソナライズされない広告が表示されます）。許可は、iPhone の「設定」→「プライバシーとセキュリティ」→「トラッキング」からいつでも変更できます。</p>
+
+    <h2 id="iap">6. アプリ内課金について</h2>
+    <p>アプリ内課金「広告を消す」でバナー広告を非表示にできます。購入は Apple の仕組みで行われ、開発者はあなたの支払い情報を受け取りません。</p>
+
+    <h2 id="data">7. データの保存と削除</h2>
+    <p>記録と設定は、iCloud 同期または iPhone の標準バックアップによって新しい端末へ引き継がれます。これはあなた自身のデータであり、開発者はアクセスできません。記録は、本アプリの「設定」→「記録をすべて削除」からいつでも消せます（確認のあと、同じ iCloud を使っているほかの端末の記録も消えます。「広告を消す」の購入は残ります）。本アプリを端末から削除すると、端末内のデータは消えます。iCloud 上の同期データは、iPhone の「設定」→ Apple アカウント →「iCloud」→「アカウントのストレージを管理」からも削除できます。</p>
+
+    <h2 id="sources">8. 出典</h2>
+    <ul>
+      <li>行政区域の判定には「国土数値情報（行政区域データ）」（国土交通省）を加工したデータを使用しています。</li>
+      <li>国の判定には Natural Earth の国境データ（パブリックドメイン）を加工したデータを使用しています。</li>
+      <li>天気データ: Apple Weather（アプリの設定画面に帰属表示があります）。</li>
+    </ul>
+
+    <h2 id="support">9. サポート・よくある質問</h2>
+    <ul>
+      <li>お問い合わせ: <a href="mailto:shirai.apps@ymail.ne.jp">shirai.apps@ymail.ne.jp</a>（iPhone の機種・iOS のバージョン・アプリのバージョン・起きたことを添えてください）</li>
+      <li><strong>ねこが出てきません</strong> — 同じ場所で探しても、必ず会えるとは限りません。見つからないときは足あとが残り、足あとが3つたまると次の「さがす」で必ず会えます。初めての県では、その県のねこに必ず会えます。</li>
+      <li><strong>「さがす」が押せなくなりました</strong> — 「さがす」は1日3回までです。行ったことのない市区町村では、最初の1回は回数を使いません。広告を見ると3回追加できます。回数は毎日0時に戻ります。</li>
+      <li><strong>海外ではどうなりますか</strong> — 34の国と地域に、その国のねこがいます。その国で初めて「さがす」を押すと必ず会え、その1回は回数を使いません。それ以外の場所では、どこにでもいるねこ（全国ねこ）に会えます。県のねこと街ねこは日本国内でのみ出会えます。</li>
+      <li><strong>街ねこがなかなか出ません</strong> — 街ねこは、決まった市区町村の中でさがしたときだけ出ます。図鑑で、まだ会っていない街ねこの下に街の名前が出ています。</li>
+      <li><strong>位置情報の許可を求められます</strong> — 今いる市区町村を調べるために、「さがす」を押した瞬間だけ使います。移動の追跡はしません。</li>
+      <li><strong>機種変更しても記録は残りますか</strong> — 同じ Apple アカウントで iCloud を使っていれば、自動で引き継がれます。</li>
+      <li><strong>広告を消したのに表示されます</strong> — 設定画面の「購入を復元」をお試しください。</li>
+    </ul>
+
+    <h2 id="revisions">10. 改定</h2>
+    <p>本ポリシーを改定する場合は、本ページで告知します。</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="ページ"><a href="./">プライバシーポリシー</a><a href="./#support">サポート・よくある質問</a></nav>
+      <p>お問い合わせ: <a href="mailto:shirai.apps@ymail.ne.jp">shirai.apps@ymail.ne.jp</a> · © Raimu Okano</p>
+    </div>
+  </footer>
+</body>
+</html>
